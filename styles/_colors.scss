@@ -1,0 +1,70 @@
+:root {
+    --color-primary-orange-900: hsl(22, 89%, 52%);
+    --color-primary-orange-700: hsl(22, 100%, 69%);
+    --color-primary-blue-900: hsl(220, 49%, 17%);
+    --color-primary-blue-700: hsl(221, 23%, 58%);
+    --color-primary-blue-500: hsl(198, 28%, 93%);
+    --color-primary-white: hsl(0, 0%, 100%);
+
+    // button
+    --btn-primary-background: var(--color-primary-orange-900);
+    --btn-primary-background-hover: var(--color-primary-orange-light-700);
+    --btn-neutral-background: var(--color-primary-blue-500);
+    --btn-neutral-hover: var(--color-primary-blue-900);
+
+    //body
+    --color-body-background: var(--color-primary-white);
+
+    //text
+    --color-heading: var(--color-primary-blue-900);
+    --color-paragraph: var(--color-primary-blue-700);
+
+    --color-btn-primary-text: var(--color-primary-white);
+    --color-btn-primary-text-hover: var(--color-primary-white);
+
+    --color-btn-neutral-text: var(--color-primary-white);
+    --color-btn-neutral-text-hover: var(--color-primary-blue-900);
+}
+
+body {
+    background-color: var(--color-body-background);
+}
+
+.btn--primary {
+    background-color: var(--btn-primary-background);
+    color: var(--color-btn-primary-text);
+    &:hover {
+        background-color: var(--btn-primary-background-hover);
+        color: var(--color-btn-primary-text-hover);
+    }
+}
+
+.btn--neutral {
+    background-color: var(--btn-neutral-background);
+    color: var(--color-btn-neutral-text);
+    &:hover {
+        background-color: var(--btn-neutral-background-hover);
+        color: var(--color-btn-neutral-text-hover);
+    }
+}
+
+.txt__head {
+    color: var(--color-heading);
+}
+
+.text--reg {
+    color: var(--color-paragraph);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .txt__head;
+}
+
+body {
+    @extend .text--reg;
+}

@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;900&display=swap");
+:root {
+  --color-primary-orange-900: hsl(22, 89%, 52%);
+  --color-primary-orange-700: hsl(22, 100%, 69%);
+  --color-primary-blue-900: hsl(220, 49%, 17%);
+  --color-primary-blue-700: hsl(221, 23%, 58%);
+  --color-primary-blue-500: hsl(198, 28%, 93%);
+  --color-primary-white: hsl(0, 0%, 100%);
+  --btn-primary-background: var(--color-primary-orange-900);
+  --btn-primary-background-hover: var(--color-primary-orange-light-700);
+  --btn-neutral-background: var(--color-primary-blue-500);
+  --btn-neutral-hover: var(--color-primary-blue-900);
+  --color-body-background: var(--color-primary-white);
+  --color-heading: var(--color-primary-blue-900);
+  --color-paragraph: var(--color-primary-blue-700);
+  --color-btn-primary-text: var(--color-primary-white);
+  --color-btn-primary-text-hover: var(--color-primary-white);
+  --color-btn-neutral-text: var(--color-primary-white);
+  --color-btn-neutral-text-hover: var(--color-primary-blue-900);
+}
+
+body {
+  background-color: var(--color-body-background);
+}
+
+.btn--primary {
+  background-color: var(--btn-primary-background);
+  color: var(--color-btn-primary-text);
+}
+.btn--primary:hover {
+  background-color: var(--btn-primary-background-hover);
+  color: var(--color-btn-primary-text-hover);
+}
+
+.btn--neutral {
+  background-color: var(--btn-neutral-background);
+  color: var(--color-btn-neutral-text);
+}
+.btn--neutral:hover {
+  background-color: var(--btn-neutral-background-hover);
+  color: var(--color-btn-neutral-text-hover);
+}
+
+.txt__head, h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+}
+
+.text--reg, body {
+  color: var(--color-paragraph);
+}
+
+:root {
+  --font-primary: "Barlow";
+  --font-secondary: serif;
+  --text-base-size: 16px;
+  --text-base-line-height: 1.625rem;
+  --text-base-weight: 500;
+  --text-xxl: 3.5rem;
+  --text-xl: 2rem;
+  --text-lg: 1.5rem;
+  --text-xxl-line-height: 3.5rem;
+  --text-xl-line-height: 2.25rem;
+  --text-lg-line-height: 1.75rem;
+  --text-heading-weight: 900;
+}
+
+.text--reg, .btn, body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base-size);
+  font-weight: var(--text-base-weight);
+  line-height: var(--text-base-line-height);
+}
+
+.text--header, .text--lg,
+.text--xl,
+.text--xxl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--text-heading-weight);
+}
+
+.text--lg,
+h3 {
+  font-size: var(--text-lg);
+  line-height: var(--text-lg-line-height);
+}
+
+.text--xl,
+h2 {
+  font-size: var(--text-xl);
+  line-height: var(--text-xl-line-height);
+}
+
+.text--xxl,
+h1 {
+  font-size: var(--text-xxl);
+  line-height: var(--text-xxl-line-height);
+}
+
+:root {
+  --btn-radius: 8px;
+  --btn-padding-top-btm: 1rem;
+  --btn-padding-left-right: 1.625rem;
+}
+
+.btn {
+  white-space: nowrap;
+  text-decoration: none;
+  padding: var(--btn-padding-left-right) var(--btn-padding-top-btm);
+  display: inline-flex;
+  position: relative;
+  border-radius: var(--btn-radius);
+}
+
+/*# sourceMappingURL=styles.css.map */
