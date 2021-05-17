@@ -1,7 +1,9 @@
 :root {
     --btn-radius: 8px;
-    --btn-padding-top-btm: 1rem;
-    --btn-padding-left-right: 1.625rem; 
+    --btn-padding-top-btm: 0.6875rem;
+    --btn-padding-left-right: 0.875rem; 
+    // --btn-padding-top-btm: 1rem;
+    // --btn-padding-left-right: 1.625rem; 
 }
 
 .btn {
@@ -15,3 +17,5 @@
     border: none;
     text-transform: uppercase;
 }
+
+

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap');
 :root {
     --font-primary: "Barlow";
     --font-secondary: serif;
@@ -6,15 +6,15 @@
     --text-base-size: 16px;
     --text-base-line-height: 1.625rem;
     --text-base-weight: 500;
-
-    --text-xxl: 3.5rem;
+    --text-span-weight: 700;
+    --text-xxl: 3rem;
     --text-xl: 2rem;
     --text-lg: 1.5rem;
 
-    --text-xxl-line-height: 3.5rem;
+    --text-xxl-line-height: 3rem;
     --text-xl-line-height: 2.25rem;
     --text-lg-line-height: 1.75rem;
-
+    --text-span-weight: 700;
     --text-heading-weight: 900;
 }
 
@@ -30,9 +30,12 @@ body {
 }
 
 .text--header {
-    font-family: var(--font-primary);
     font-weight: var(--text-heading-weight);
     text-transform: uppercase;
+}
+
+.text--strong {
+    font-weight: var(--text-span-weight);
 }
 
 .text--lg,
@@ -65,7 +68,8 @@ h1 {
     line-height: var(--text-xxl-line-height);
 }
 
-
+// Button doesnt by default inherit properties from body.
 .btn {
     @extend .text--reg;
+    @extend .text--strong;
 }

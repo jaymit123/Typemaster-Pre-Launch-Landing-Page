@@ -64,6 +64,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
+1. img tag does not support ::Befor and ::after pesudo elements in some browser:
+https://lildude.co.uk/after-css-property-for-img-tag
+
 To see how you can add code snippets, see below:
 
 ```html
@@ -94,8 +97,12 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Graduating to Grid by Rachel Andrews](https://www.youtube.com/watch?v=f1yM8HYv9lc&t=1414s) - I used this link to understand Intrinsinc and Extrinisic Sizing using CSS Grids and Flexbox, helped me out a lot even in other projects I am working  on.
+- [Layout Land](https://www.youtube.com/channel/UC7TizprGknbDalbHplROtag) - Layout Land is a youtube channel that has great content about CSS Grids and Its properties.
+- [Colors in Design Systems](https://medium.com/codyhouse/create-your-design-system-part-3-colors-798e4729921f) - How to organize colors in your project using Design Systems
+- [Typography in Design Systems](https://medium.com/codyhouse/create-your-design-system-part-2-grid-layout-aa961d59b8d6) - Good guide on how to manage typography.
+- [BEM CSS Patten - Avoiding Common Mistakes](https://www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-problems-and-how-to-avoid-them/) - Teaches how to use BEM that makes sense and avoids too large class names.
+
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
