@@ -1,4 +1,6 @@
+@use './responsive' as *;
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap');
+
 :root {
     --font-primary: "Barlow";
     --font-secondary: serif;

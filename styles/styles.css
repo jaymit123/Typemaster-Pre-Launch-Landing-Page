@@ -122,6 +122,8 @@ h1 {
   --btn-radius: 8px;
   --btn-padding-top-btm: 0.6875rem;
   --btn-padding-left-right: 0.875rem;
+  --btn-padding-top-btm-tablet: 1rem;
+  --btn-padding-left-right-tablet: 1.625rem;
 }
 
 .btn {
@@ -135,9 +137,14 @@ h1 {
   border: none;
   text-transform: uppercase;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .btn {
+    padding: var(--btn-padding-top-btm-tablet) var(--btn-padding-left-right-tablet);
+  }
+}
 
 :root {
-  --main--padding--desktop: 2.4375rem;
+  --main--padding--tablet: 2.5rem;
   --main--padding--mobile: 1.5rem;
 }
 
@@ -152,6 +159,11 @@ body {
   display: grid;
   grid-template-rows: 1.4375rem max-content 4rem max-content 6rem max-content 3.125rem;
   grid-template-areas: "." "header" "." "main" "." "footer" ".";
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    grid-template-rows: 2.5rem max-content 4rem max-content 8.875rem max-content 2.6875rem;
+  }
 }
 
 .typemaster__icon {
@@ -180,6 +192,11 @@ body {
   grid-template-areas: ". icon  . preorder-btn .";
   align-items: center;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__header {
+    grid-template-columns: var(--main--padding--tablet) min-content 1fr min-content var(--main--padding--tablet);
+  }
+}
 .typemaster__header .typemaster__icon {
   grid-area: icon;
   height: 40px;
@@ -192,10 +209,21 @@ body {
   display: grid;
   row-gap: 1.5rem;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main {
+    row-gap: 2.5rem;
+  }
+}
 .typemaster__main .typemaster__preorder {
   display: grid;
   grid-template-columns: 1.5rem 1fr 1.5rem;
   grid-template-rows: auto 4rem auto;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__preorder {
+    grid-template-columns: 1.5rem 1fr 4.3125rem 1fr 1.5rem;
+    grid-template-rows: 5rem auto 5rem;
+  }
 }
 .typemaster__main .typemaster__preorder__details {
   grid-column: 2/3;
@@ -204,6 +232,11 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr min-content;
   grid-gap: 2rem 1.5rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__preorder__details {
+    grid-row: 2/3;
+  }
 }
 .typemaster__main .typemaster__preorder__details__title {
   grid-column: 1/3;
@@ -223,9 +256,15 @@ body {
   grid-row: 3/4;
   object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__preorder .typemaster__keyboard {
+    grid-row: 1/4;
+    grid-column: 4/6;
+  }
 }
 .typemaster__main .typemaster__preorder .square {
   display: none;
@@ -236,6 +275,14 @@ body {
   grid-template-rows: 193px auto;
   column-gap: 1.5rem;
   row-gap: 4.6875rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__keyboard {
+    grid-template-columns: 39px 214px 30px 445px auto;
+    grid-template-rows: 320px auto;
+    column-gap: 0rem;
+    row-gap: 4.5rem;
+  }
 }
 .typemaster__main .typemaster__keyboard .square {
   display: none;
@@ -248,12 +295,25 @@ body {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__keyboard__mobile {
+    grid-column: 2/3;
+    border-radius: 20px;
+  }
+}
 .typemaster__main .typemaster__keyboard__mobile > img {
   object-fit: cover;
   display: block;
   width: 129px;
   height: 193px;
   margin-left: -22px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__keyboard__mobile > img {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
 }
 .typemaster__main .typemaster__keyboard__mobile:after {
   content: " ";
@@ -273,15 +333,36 @@ body {
   border-radius: 20px;
   grid-column: 2/-2;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__keyboard__glass {
+    grid-column: 4/5;
+  }
+}
 .typemaster__main .typemaster__keyboard__info {
   grid-column: 1/-1;
   text-align: center;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__keyboard__info {
+    grid-column: 2/-2;
+    display: flex;
+  }
+}
 .typemaster__main .typemaster__keyboard__info h2 {
   margin: 0 3.75rem;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__keyboard__info h2 {
+    margin: 0;
+  }
+}
 .typemaster__main .typemaster__keyboard__info p {
   margin: 1.5rem 1.5rem 0 1.5rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__keyboard__info p {
+    margin: 0;
+  }
 }
 .typemaster__footer {
   grid-area: footer;
@@ -297,6 +378,8 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   text-align: center;
+}
+.l-list__item:not(:last-child) {
   margin-bottom: 4rem;
 }
 .l-list__item h3 {
