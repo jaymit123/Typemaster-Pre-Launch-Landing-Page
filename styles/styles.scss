@@ -87,10 +87,10 @@ body {
         }
         #{$self}__preorder {
             display: grid;
-            grid-template-columns: 1.5rem 1fr 1.5rem;
+            grid-template-columns: var(--main--padding--mobile) 1fr var(--main--padding--mobile);
             grid-template-rows: auto 4rem auto;
             @include media("tablet") {
-                grid-template-columns: 1.5rem 1fr 4.3125rem 1fr 1.5rem;
+                grid-template-columns: var(--main--padding--tablet) 1fr 4.3125rem 1fr var(--main--padding--tablet);
                 grid-template-rows: 5rem auto 5rem;
             }
             &__details {
@@ -125,15 +125,16 @@ body {
             #{$self}__keyboard {
                 grid-column: 2/4;
                 grid-row: 3/4;
+                object-fit: cover;
+                width: 100%;
+                height: auto;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
                 @include media("tablet") {
                     grid-row: 1 / 4;
                     grid-column: 4 / 6;
+                    height: 100%;
                 }
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
             }
 
             .square {
@@ -143,15 +144,14 @@ body {
 
         #{$self}__keyboard {
             display: grid;
-            grid-template-columns: 107px 220px auto;
-            grid-template-rows: 193px auto;
-            column-gap: 1.5rem;
-            row-gap: 4.6875rem;
+            grid-template-columns: var(--main--padding--mobile) repeat(10, 1fr) var(--main--padding--mobile);
+            grid-template-rows: 193px 4.6875rem auto 1.5rem auto;
+            column-gap: var(--main--padding--mobile);
             @include media("tablet") {
-                grid-template-columns: 39px 214px 30px 445px auto;
+                grid-template-columns: var(--main--padding--tablet) repeat(23, 1fr) var(--main--padding--tablet);
                 grid-template-rows: 320px auto;
                 column-gap: 0rem;
-                row-gap: 4.5rem;
+                row-gap: 2.5rem;
             }
 
             .square {
@@ -164,8 +164,10 @@ body {
                 position: relative;
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
+                grid-column: 1 / 4;
+
                 @include media("tablet") {
-                    grid-column: 2 / 3;
+                    grid-column: 2 / 9;
                     border-radius: 20px;
                 }
                 > img {
@@ -176,7 +178,7 @@ body {
                     margin-left: -22px;
                     @include media("tablet") {
                         width: 100%;
-                        height: auto;
+                        height: 100%;
                         margin-left: 0;
                     }
                 }
@@ -198,10 +200,32 @@ body {
                 width: 100%;
                 height: 100%;
                 border-radius: 20px;
+                grid-column: 4 / -2;
+                @include media("tablet") {
+                    grid-column: 10 / -2;
+                }
+            }
+
+            h2 {
+                text-align: center;
+                grid-row: 3 / 4;
+                grid-column: 2 / -2;
+                @include media("tablet") {
+                    text-align: unset;
+                    grid-column: 2 / 10;
+                }
+
+            }
+
+            p {
+                text-align: center;
+                grid-row: 5 / 6;
                 grid-column: 2 / -2;
 
                 @include media("tablet") {
-                    grid-column: 4 / 5;
+                    text-align: unset;
+                    grid-row: 3 / 4;
+                    grid-column: 11 / -2;
                 }
             }
 
@@ -240,21 +264,41 @@ body {
 .l-list {
     margin-top: 6.9375rem;
     padding: 0rem 1.5rem;
+    @include media("tablet") {
+        margin-top: 6.375rem;
+        padding: 0;
+        display: grid;
+        grid-template-columns: var(--main--padding--tablet) 1fr 1fr var(--main--padding--tablet);
+    }
     &__item {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         text-align: center;
+        @include media("tablet"){
+            grid-column: 2 / 3;
+            align-items: start;
+            text-align: start;
+        }
         &:not(:last-child) {
             margin-bottom: 4rem;
         }
         h3 {
             margin-bottom: 1.5rem;
             padding: 0 4rem;
+            @include media("tablet"){
+                padding: 0 8rem 0 0;
+            }
         }
 
         .typemaster__icon {
             margin-bottom: 3rem;
+        }
+
+        &:nth-child(2n) {  
+            @include media("tablet"){
+                grid-column: 3 / 4;
+            }     
         }
     }
 }

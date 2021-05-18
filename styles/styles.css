@@ -216,12 +216,12 @@ body {
 }
 .typemaster__main .typemaster__preorder {
   display: grid;
-  grid-template-columns: 1.5rem 1fr 1.5rem;
+  grid-template-columns: var(--main--padding--mobile) 1fr var(--main--padding--mobile);
   grid-template-rows: auto 4rem auto;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .typemaster__main .typemaster__preorder {
-    grid-template-columns: 1.5rem 1fr 4.3125rem 1fr 1.5rem;
+    grid-template-columns: var(--main--padding--tablet) 1fr 4.3125rem 1fr var(--main--padding--tablet);
     grid-template-rows: 5rem auto 5rem;
   }
 }
@@ -256,7 +256,7 @@ body {
   grid-row: 3/4;
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -264,6 +264,7 @@ body {
   .typemaster__main .typemaster__preorder .typemaster__keyboard {
     grid-row: 1/4;
     grid-column: 4/6;
+    height: 100%;
   }
 }
 .typemaster__main .typemaster__preorder .square {
@@ -271,17 +272,16 @@ body {
 }
 .typemaster__main .typemaster__keyboard {
   display: grid;
-  grid-template-columns: 107px 220px auto;
-  grid-template-rows: 193px auto;
-  column-gap: 1.5rem;
-  row-gap: 4.6875rem;
+  grid-template-columns: var(--main--padding--mobile) repeat(10, 1fr) var(--main--padding--mobile);
+  grid-template-rows: 193px 4.6875rem auto 1.5rem auto;
+  column-gap: var(--main--padding--mobile);
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .typemaster__main .typemaster__keyboard {
-    grid-template-columns: 39px 214px 30px 445px auto;
+    grid-template-columns: var(--main--padding--tablet) repeat(23, 1fr) var(--main--padding--tablet);
     grid-template-rows: 320px auto;
     column-gap: 0rem;
-    row-gap: 4.5rem;
+    row-gap: 2.5rem;
   }
 }
 .typemaster__main .typemaster__keyboard .square {
@@ -294,10 +294,11 @@ body {
   position: relative;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  grid-column: 1/4;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .typemaster__main .typemaster__keyboard__mobile {
-    grid-column: 2/3;
+    grid-column: 2/9;
     border-radius: 20px;
   }
 }
@@ -311,7 +312,7 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   .typemaster__main .typemaster__keyboard__mobile > img {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin-left: 0;
   }
 }
@@ -331,11 +332,34 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  grid-column: 2/-2;
+  grid-column: 4/-2;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .typemaster__main .typemaster__keyboard__glass {
-    grid-column: 4/5;
+    grid-column: 10/-2;
+  }
+}
+.typemaster__main .typemaster__keyboard h2 {
+  text-align: center;
+  grid-row: 3/4;
+  grid-column: 2/-2;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__keyboard h2 {
+    text-align: unset;
+    grid-column: 2/10;
+  }
+}
+.typemaster__main .typemaster__keyboard p {
+  text-align: center;
+  grid-row: 5/6;
+  grid-column: 2/-2;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .typemaster__main .typemaster__keyboard p {
+    text-align: unset;
+    grid-row: 3/4;
+    grid-column: 11/-2;
   }
 }
 .typemaster__main .typemaster__keyboard__info {
@@ -373,11 +397,26 @@ body {
   margin-top: 6.9375rem;
   padding: 0rem 1.5rem;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .l-list {
+    margin-top: 6.375rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: var(--main--padding--tablet) 1fr 1fr var(--main--padding--tablet);
+  }
+}
 .l-list__item {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   text-align: center;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .l-list__item {
+    grid-column: 2/3;
+    align-items: start;
+    text-align: start;
+  }
 }
 .l-list__item:not(:last-child) {
   margin-bottom: 4rem;
@@ -386,8 +425,18 @@ body {
   margin-bottom: 1.5rem;
   padding: 0 4rem;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .l-list__item h3 {
+    padding: 0 8rem 0 0;
+  }
+}
 .l-list__item .typemaster__icon {
   margin-bottom: 3rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .l-list__item:nth-child(2n) {
+    grid-column: 3/4;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -93,8 +93,7 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
+THings to work on: Improve CSS Grid logic, try to make it responsive by using css grid to make it more fluid
 ### Useful resources
 
 - [Graduating to Grid by Rachel Andrews](https://www.youtube.com/watch?v=f1yM8HYv9lc&t=1414s) - I used this link to understand Intrinsinc and Extrinisic Sizing using CSS Grids and Flexbox, helped me out a lot even in other projects I am working  on.
