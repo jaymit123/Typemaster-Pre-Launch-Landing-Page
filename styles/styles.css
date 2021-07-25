@@ -144,6 +144,7 @@ h1 {
 }
 
 :root {
+  --main--padding--desktop: 10.3125rem;
   --main--padding--tablet: 2.5rem;
   --main--padding--mobile: 1.5rem;
 }
@@ -163,6 +164,11 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   body {
     grid-template-rows: 2.5rem max-content 4rem max-content 8.875rem max-content 2.6875rem;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    grid-template-rows: 3.4375rem max-content 5.1875rem max-content 8rem max-content 2.4375rem;
   }
 }
 
@@ -197,6 +203,11 @@ body {
     grid-template-columns: var(--main--padding--tablet) min-content 1fr min-content var(--main--padding--tablet);
   }
 }
+@media (min-width: 1024px) {
+  .typemaster__header {
+    grid-template-columns: var(--main--padding--desktop) min-content 1fr min-content var(--main--padding--desktop);
+  }
+}
 .typemaster__header .typemaster__icon {
   grid-area: icon;
   height: 40px;
@@ -214,6 +225,11 @@ body {
     row-gap: 2.5rem;
   }
 }
+@media (min-width: 1024px) {
+  .typemaster__main {
+    row-gap: 1.875rem;
+  }
+}
 .typemaster__main .typemaster__preorder {
   display: grid;
   grid-template-columns: var(--main--padding--mobile) 1fr var(--main--padding--mobile);
@@ -223,6 +239,12 @@ body {
   .typemaster__main .typemaster__preorder {
     grid-template-columns: var(--main--padding--tablet) 1fr 4.3125rem 1fr var(--main--padding--tablet);
     grid-template-rows: 5rem auto 5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__preorder {
+    grid-template-columns: var(--main--padding--desktop) 1fr 7.8125rem 1fr 1.875rem calc(var(--main--padding--desktop) - 1.875rem);
+    grid-template-rows: 3.75rem 11.25rem 1fr 3.75rem;
   }
 }
 .typemaster__main .typemaster__preorder__details {
@@ -238,11 +260,22 @@ body {
     grid-row: 2/3;
   }
 }
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__preorder__details {
+    grid-row: 2/3;
+    grid-gap: 1.5rem 1.5rem;
+  }
+}
 .typemaster__main .typemaster__preorder__details__title {
   grid-column: 1/3;
 }
 .typemaster__main .typemaster__preorder__details__description {
   grid-column: 1/3;
+}
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__preorder__details__description {
+    font-size: 18px;
+  }
 }
 .typemaster__main .typemaster__preorder__details__btn {
   justify-self: start;
@@ -267,8 +300,25 @@ body {
     height: 100%;
   }
 }
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__preorder .typemaster__keyboard {
+    grid-row: 1/5;
+    grid-column: 4/5;
+    height: 100%;
+    border-radius: 20px;
+  }
+}
 .typemaster__main .typemaster__preorder .square {
   display: none;
+}
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__preorder .square {
+    grid-column: 6/7;
+    grid-row: 1/3;
+    display: block;
+    background-color: var(--color-primary-blue-500);
+    border-radius: 20px 0 0 20px;
+  }
 }
 .typemaster__main .typemaster__keyboard {
   display: grid;
@@ -284,8 +334,25 @@ body {
     row-gap: 2.5rem;
   }
 }
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__keyboard {
+    grid-template-columns: 7.968rem 1.875rem 15.9375rem 1.875rem 27.8125rem 7.8125rem 15.9375rem var(--main--padding--desktop);
+    grid-template-rows: 236px 8px 236px;
+    column-gap: 0rem;
+    row-gap: 1rem;
+  }
+}
 .typemaster__main .typemaster__keyboard .square {
   display: none;
+}
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__keyboard .square {
+    display: block;
+    background-color: var(--color-primary-blue-500);
+    border-radius: 0px 20px 20px 0px;
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
 }
 .typemaster__main .typemaster__keyboard__mobile {
   width: 100%;
@@ -302,6 +369,13 @@ body {
     border-radius: 20px;
   }
 }
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__keyboard__mobile {
+    grid-column: 3/4;
+    grid-row: 1/-1;
+    border-radius: 20px;
+  }
+}
 .typemaster__main .typemaster__keyboard__mobile > img {
   object-fit: cover;
   display: block;
@@ -309,7 +383,7 @@ body {
   height: 193px;
   margin-left: -22px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .typemaster__main .typemaster__keyboard__mobile > img {
     width: 100%;
     height: 100%;
@@ -339,6 +413,13 @@ body {
     grid-column: 10/-2;
   }
 }
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__keyboard__glass {
+    grid-column: 5/6;
+    grid-row: 1/-1;
+    border-radius: 20px;
+  }
+}
 .typemaster__main .typemaster__keyboard h2 {
   text-align: center;
   grid-row: 3/4;
@@ -348,6 +429,14 @@ body {
   .typemaster__main .typemaster__keyboard h2 {
     text-align: unset;
     grid-column: 2/10;
+  }
+}
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__keyboard h2 {
+    text-align: unset;
+    grid-column: 7/8;
+    grid-row: 1/2;
+    align-self: end;
   }
 }
 .typemaster__main .typemaster__keyboard p {
@@ -362,30 +451,11 @@ body {
     grid-column: 11/-2;
   }
 }
-.typemaster__main .typemaster__keyboard__info {
-  grid-column: 1/-1;
-  text-align: center;
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .typemaster__main .typemaster__keyboard__info {
-    grid-column: 2/-2;
-    display: flex;
-  }
-}
-.typemaster__main .typemaster__keyboard__info h2 {
-  margin: 0 3.75rem;
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .typemaster__main .typemaster__keyboard__info h2 {
-    margin: 0;
-  }
-}
-.typemaster__main .typemaster__keyboard__info p {
-  margin: 1.5rem 1.5rem 0 1.5rem;
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .typemaster__main .typemaster__keyboard__info p {
-    margin: 0;
+@media (min-width: 1024px) {
+  .typemaster__main .typemaster__keyboard p {
+    text-align: unset;
+    grid-column: 7/8;
+    grid-row: 3/4;
   }
 }
 .typemaster__footer {
@@ -405,6 +475,14 @@ body {
     grid-template-columns: var(--main--padding--tablet) 1fr 1fr var(--main--padding--tablet);
   }
 }
+@media (min-width: 1024px) {
+  .l-list {
+    margin-top: 6.375rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: var(--main--padding--desktop) 1fr 30px 1fr 30px 1fr 30px 1fr var(--main--padding--desktop);
+  }
+}
 .l-list__item {
   display: flex;
   flex-flow: column nowrap;
@@ -418,14 +496,42 @@ body {
     text-align: start;
   }
 }
-.l-list__item:not(:last-child) {
-  margin-bottom: 4rem;
+@media (min-width: 1024px) {
+  .l-list__item {
+    align-items: start;
+    text-align: start;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .l-list__item:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .l-list__item:nth-child(1) {
+    grid-column: 2/3;
+  }
+}
+@media (min-width: 1024px) {
+  .l-list__item:nth-child(2) {
+    grid-column: 4/5;
+  }
+}
+@media (min-width: 1024px) {
+  .l-list__item:nth-child(3) {
+    grid-column: 6/7;
+  }
+}
+@media (min-width: 1024px) {
+  .l-list__item:nth-child(4) {
+    grid-column: 8/9;
+  }
 }
 .l-list__item h3 {
   margin-bottom: 1.5rem;
   padding: 0 4rem;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .l-list__item h3 {
     padding: 0 8rem 0 0;
   }
