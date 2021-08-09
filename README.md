@@ -30,8 +30,8 @@ This is a solution to the [Typemaster pre-launch landing page challenge on Front
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/typemaster-landing-page-with-css-grids-layout-VRBfeKY1k](https://www.frontendmentor.io/solutions/typemaster-landing-page-with-css-grids-layout-VRBfeKY1k)
+- Live Site URL: [https://jaymit-typemaster.netlify.app/](https://jaymit-typemaster.netlify.app/)
 
 ## My process
 
